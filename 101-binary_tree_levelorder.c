@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 #include <stdlib.h>
 #include <stdio.h>
-
+#define MAX_QUEUE_SIZE 1024
 /**
  * binary_tree_height - Measures the height of a binary tree
  * @tree: Pointer to the root node of the tree to measure
@@ -35,7 +35,7 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 		return;
 
 	binary_tree_t **queue = malloc(sizeof(binary_tree_t *)
-			* binary_tree_height(tree) + 1);
+			* MAX_QUEUE_SIZE);
 	if (queue == NULL)
 		return;
 
