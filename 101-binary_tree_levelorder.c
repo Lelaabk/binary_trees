@@ -26,7 +26,8 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
  * @func: printing function
  * @level: level to traverse
  */
-void binary_tree_levelorder_util(const binary_tree_t *tree, void (*func)(int), size_t level)
+void binary_tree_levelorder_util(const binary_tree_t *tree,
+	void (*func)(int), size_t level)
 {
 	if (!tree)
 		return;
